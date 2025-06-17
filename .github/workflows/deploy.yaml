@@ -4,9 +4,13 @@ on: push
 jobs:
   first_job:
     runs-on: ubuntu-latest
+
+    env: 
+      name: CodigoFacilito
+
     steps: 
       - name: Hola mundo
-        run: echo "Hola mundo"
+        run: echo "Hola mundo $CodigoFacilito"
 
   second_job:
     if: ${{ github.ref == 'refs/heads/main' }}
